@@ -1,0 +1,650 @@
+﻿<Window x:Class="Sudoku.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sudoku"
+        Icon="Bilder/Sudoku.ico"
+        mc:Ignorable="d"
+        Title="Sudoku" Height="600" Width="600">
+
+    <DockPanel>
+
+
+        <Grid DockPanel.Dock="Top" Margin="10"  >
+            <Grid.RowDefinitions >
+                <RowDefinition Height="55" />
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="55"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Border BorderThickness="6,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="0">
+                <TextBox x:Name="feld1"  Text="0" VerticalAlignment="Top" IsEnabled="True" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+        <Border BorderThickness="2,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+                <TextBox x:Name="feld2"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+            </TextBox>
+        </Border>
+
+
+        <Border BorderThickness="2,6,3,2" BorderBrush="Black" Grid.Row="0" Grid.Column="2">
+                <TextBox x:Name="feld3"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+        </Border>
+
+            <Border BorderThickness="3,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="3">
+                <TextBox x:Name="feld4"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="4">
+                <TextBox x:Name="feld5"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,6,3,2" BorderBrush="Black" Grid.Row="0" Grid.Column="5">
+                <TextBox x:Name="feld6"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="6">
+                <TextBox x:Name="feld7"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,6,2,2" BorderBrush="Black" Grid.Row="0" Grid.Column="7">
+                <TextBox x:Name="feld8"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,6,6,2" BorderBrush="Black" Grid.Row="0" Grid.Column="8">
+                <TextBox x:Name="feld9"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="6,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="0">
+                <TextBox x:Name="feld10"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="1">
+                <TextBox x:Name="feld11"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="1" Grid.Column="2">
+                <TextBox x:Name="feld12"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="3">
+                <TextBox x:Name="feld13"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="4">
+                <TextBox x:Name="feld14"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="1" Grid.Column="5">
+                <TextBox x:Name="feld15"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="6">
+                <TextBox x:Name="feld16"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="1" Grid.Column="7">
+                <TextBox x:Name="feld17"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,2" BorderBrush="Black" Grid.Row="1" Grid.Column="8">
+                <TextBox x:Name="feld18"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+            <Border BorderThickness="6,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="0">
+                <TextBox x:Name="feld19"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="1">
+                <TextBox x:Name="feld20"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,3" BorderBrush="Black" Grid.Row="2" Grid.Column="2">
+                <TextBox x:Name="feld21"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="3">
+                <TextBox x:Name="feld22"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="4">
+                <TextBox x:Name="feld23"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,3" BorderBrush="Black" Grid.Row="2" Grid.Column="5">
+                <TextBox x:Name="feld24"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="6">
+                <TextBox x:Name="feld25"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="2" Grid.Column="7">
+                <TextBox x:Name="feld26"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,3" BorderBrush="Black" Grid.Row="2" Grid.Column="8">
+                <TextBox x:Name="feld27"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+
+
+            <Border BorderThickness="6,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="0">
+                <TextBox x:Name="feld28"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="1">
+                <TextBox x:Name="feld29"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+            <Border BorderThickness="2,3,3,2" BorderBrush="Black" Grid.Row="3" Grid.Column="2">
+                <TextBox x:Name="feld30"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="3">
+                <TextBox x:Name="feld31"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="4">
+                <TextBox x:Name="feld32"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,3,2" BorderBrush="Black" Grid.Row="3" Grid.Column="5">
+                <TextBox x:Name="feld33"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="6">
+                <TextBox x:Name="feld34"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="3" Grid.Column="7">
+                <TextBox x:Name="feld35"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,6,2" BorderBrush="Black" Grid.Row="3" Grid.Column="8">
+                <TextBox x:Name="feld36"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="6,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="0">
+                <TextBox x:Name="feld37"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="1">
+                <TextBox x:Name="feld38"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="4" Grid.Column="2">
+                <TextBox x:Name="feld39"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="3">
+                <TextBox x:Name="feld40"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="4">
+                <TextBox x:Name="feld41"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="4" Grid.Column="5">
+                <TextBox x:Name="feld42"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="6">
+                <TextBox x:Name="feld43"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="4" Grid.Column="7">
+                <TextBox x:Name="feld44"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,2" BorderBrush="Black" Grid.Row="4" Grid.Column="8">
+                <TextBox x:Name="feld45"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+            <Border BorderThickness="6,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="0">
+                <TextBox x:Name="feld46"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="1">
+                <TextBox x:Name="feld47"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,3" BorderBrush="Black" Grid.Row="5" Grid.Column="2">
+                <TextBox x:Name="feld48"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="3">
+                <TextBox x:Name="feld49"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="4">
+                <TextBox x:Name="feld50"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,3" BorderBrush="Black" Grid.Row="5" Grid.Column="5">
+                <TextBox x:Name="feld51"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="6">
+                <TextBox x:Name="feld52"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,3" BorderBrush="Black" Grid.Row="5" Grid.Column="7">
+                <TextBox x:Name="feld53"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,3" BorderBrush="Black" Grid.Row="5" Grid.Column="8">
+                <TextBox x:Name="feld54"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            
+            
+            
+            
+            <Border BorderThickness="6,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="0">
+                <TextBox x:Name="feld55"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="1">
+                <TextBox x:Name="feld56"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+            <Border BorderThickness="2,3,3,2" BorderBrush="Black" Grid.Row="6" Grid.Column="2">
+                <TextBox x:Name="feld57"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="3">
+                <TextBox x:Name="feld58"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="4">
+                <TextBox x:Name="feld59"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,3,2" BorderBrush="Black" Grid.Row="6" Grid.Column="5">
+                <TextBox x:Name="feld60"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="6">
+                <TextBox x:Name="feld61"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,2,2" BorderBrush="Black" Grid.Row="6" Grid.Column="7">
+                <TextBox x:Name="feld62"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,3,6,2" BorderBrush="Black" Grid.Row="6" Grid.Column="8">
+                <TextBox x:Name="feld63"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="6,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="0">
+                <TextBox x:Name="feld64"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="1">
+                <TextBox x:Name="feld65"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="7" Grid.Column="2">
+                <TextBox x:Name="feld66"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="3">
+                <TextBox x:Name="feld67"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="4">
+                <TextBox x:Name="feld68"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,2" BorderBrush="Black" Grid.Row="7" Grid.Column="5">
+                <TextBox x:Name="feld69"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="6">
+                <TextBox x:Name="feld70"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Row="7" Grid.Column="7">
+                <TextBox x:Name="feld71"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,2" BorderBrush="Black" Grid.Row="7" Grid.Column="8">
+                <TextBox x:Name="feld72"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+            <Border BorderThickness="6,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="0">
+                <TextBox x:Name="feld73"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="1">
+                <TextBox x:Name="feld74"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,6" BorderBrush="Black" Grid.Row="8" Grid.Column="2">
+                <TextBox x:Name="feld75"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="3">
+                <TextBox x:Name="feld76"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="4">
+                <TextBox x:Name="feld77"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,3,6" BorderBrush="Black" Grid.Row="8" Grid.Column="5">
+                <TextBox x:Name="feld78"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="3,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="6">
+                <TextBox x:Name="feld79"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,2,6" BorderBrush="Black" Grid.Row="8" Grid.Column="7">
+                <TextBox x:Name="feld80"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+            <Border BorderThickness="2,2,6,6" BorderBrush="Black" Grid.Row="8" Grid.Column="8">
+                <TextBox x:Name="feld81"  Text="0" VerticalAlignment="Top" 
+                   HorizontalAlignment="Center" FontSize="40" FontWeight="Bold" FontFamily="Arial" 
+                   Height="55" Width="55" TextAlignment="Center" >
+                </TextBox>
+            </Border>
+
+
+
+
+        </Grid>
+
+
+
+
+
+
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+
+
+            <Button x:Name="resetBtn" Click="ResetBtn_Click" Content="Zurücksetzen" Margin=" 70,5,15,5"
+                    FontFamily="Arial" FontSize="25" FontWeight="Bold">
+
+            </Button>
+            <Button x:Name="solveBtn"  Click="SolveBtn_Click"  Content="Berechnung" Margin="150,5,15,5"
+                     FontFamily="Arial" FontSize="25" FontWeight="Bold">
+
+            </Button>
+
+
+
+        </StackPanel>
+
+
+    </DockPanel>
+
+</Window>
