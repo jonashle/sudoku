@@ -631,14 +631,16 @@
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
 
 
-            <Button x:Name="resetBtn" Click="ResetBtn_Click" Content="Zurücksetzen" Margin=" 70,5,15,5"
+            <Button x:Name="resetBtn" Click="ResetBtn_Click" Content="Zurücksetzen" Margin=" 0,5,15,5"
                     FontFamily="Arial" FontSize="25" FontWeight="Bold">
 
             </Button>
-            <Button x:Name="solveBtn"  Click="SolveBtn_Click"  Content="Berechnung" Margin="150,5,15,5"
+            <Button x:Name="solveBtn"  Click="SolveBtn_Click"  Content="Berechnung" Margin="40,5,15,5"
                      FontFamily="Arial" FontSize="25" FontWeight="Bold">
 
             </Button>
+            <Button x:Name="loadBtn" Click="LoadBtn_Click" Content="Load Test" Margin="80,5,15,5" FontFamily="Arial"
+                     FontSize="25" FontWeight="Bold"></Button>
 
 
 
